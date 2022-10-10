@@ -1,9 +1,0 @@
-<body>
-    <?php
-        include('./views/modules/loader.php'); 
-        include('./views/modules/nav.php'); 
-        include('./views/modules/home.php'); 
-        include('./views/modules/footer.php');
-        include('./views/modules/scripts.php');
-    ?>
-</body>
