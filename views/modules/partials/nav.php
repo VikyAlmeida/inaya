@@ -16,11 +16,17 @@
                 </li>
                 <li><a href="contacts">Contacts</a>
                 </li>
-                <li><a href="typography">Typography</a>
-                </ul>
+                <li><a href="typography">Typography</a><li>
             </div>
             </div>
-            <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="login">Login</a></div>
+            <?php
+                if(isset($_SESSION['user'])):
+                    echo '<div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina">'.$_SESSION['user']['name'].'</a></div>';
+                else:
+                    echo '<div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="login">Login</a></div>';
+                endif;
+            ?>
+            
         </div>
         </nav>
     </div>
