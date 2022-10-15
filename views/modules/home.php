@@ -121,7 +121,12 @@
                       </div>
                     </div>
                     <div class="form-wrap form-button">
-                      <button class="button button-block button-secondary" type="submit">search flight</button>
+                      <button class="button button-block button-secondary" onclick="Swal.fire({
+  title: 'Error!',
+  text: 'Do you want to continue',
+  icon: 'error',
+  confirmButtonText: 'Cool'
+})">search flight</button>
                     </div>
                   </form>
                 </div>
@@ -130,7 +135,12 @@
           </div>
         </div>
       </section>
-
+    <?php
+      $password = 'mipassword';
+      $protegerpass = password_hash($password, PASSWORD_DEFAULT);
+      var_dump($protegerpass);
+      var_dump(password_verify('mipassword', $protegerpass));
+    ?>
       <section class="section section-variant-1 bg-default novi-background bg-cover"> 
         <div class="container container-wide">
           <div class="row row-fix justify-content-xl-end row-30 text-center text-xl-left">

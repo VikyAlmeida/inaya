@@ -9,4 +9,5 @@
     <link rel="stylesheet" href="./views/css/bootstrap.css">
     <link rel="stylesheet" href="./views/css/style.css">
     <link rel="stylesheet" href="./views/css/fonts.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
