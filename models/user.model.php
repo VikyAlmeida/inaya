@@ -1,7 +1,7 @@
 <?php
     require_once("conexion.php");
 
-    class UsuarioModel{
+    class UserModel{
         public static function where($tabla,$condicion){
             $conexion = Conectar::conectate();
             

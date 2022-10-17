@@ -17,11 +17,20 @@
                 <li><a href="contacts">Contacts</a>
                 </li>
                 <li><a href="typography">Typography</a><li>
+                <?php
+                    if ( isset($_SESSION['user']) && $_SESSION['user']['role_id']==1 ) :
+                        echo '<li><a href="panel">Panel</a><li>';
+                    else:
+                        echo '<div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="login">Login</a></div>';
+                    endif;
+                ?>
             </div>
             </div>
             <?php
                 if(isset($_SESSION['user'])):
-                    echo '<div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina">'.$_SESSION['user']['name'].'</a></div>';
+                    echo '<div class="rd-navbar-aside-right">
+                        <a href="logout" class="button button-sm button-secondary button-nina">'.$_SESSION['user']['name'].'</a>
+                    </div>';
                 else:
                     echo '<div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="login">Login</a></div>';
                 endif;
