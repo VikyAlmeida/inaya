@@ -56,7 +56,7 @@ class Generales{
         $campo = hash('sha512', $campo);
         return $campo;
     }
-    public static function foto($campo){
+    public static function foto($campo, $rutaFolder){
         $rand = rand();
         if(!empty($campo))
         {
@@ -64,7 +64,7 @@ class Generales{
             {
                 $comprueba = @getimagesize($campo["tmp_name"]);
                 if($comprueba != false){
-                    $ruta = "views/img/inmuebles_images/".$rand."".$campo["name"];
+                    $ruta = $rutaFolder."".$rand."".$campo["name"];
                     move_uploaded_file($campo["tmp_name"],$ruta);
                     $campo = $campo["name"];
                     $campo = $rand."".$campo;

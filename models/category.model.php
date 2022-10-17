@@ -1,7 +1,7 @@
 <?php
     require_once("conexion.php");
 
-    class CategoriesModel{
+    class CategoryModel{
         public static function listCategories($tabla){            
             $conexion = Conectar::conectate();
 
@@ -26,28 +26,31 @@
         public static function addCategory($tabla,$datos){
             $conexion = Conectar::conectate();
             
-            $query = "Insert into $tabla (name) values (?)";
+            $query = "Insert into $tabla (name, image, description) values (?, ?, ?)";
             $result = $conexion->prepare($query);
-            if($result->execute(array($datos["name"])))
+            if($result->execute(array($datos["name"], $datos["image"], $datos["description"])))
             {return true;}
             else
             {return false;}
         }
         
-        public function updateCategory($datos,$id){
+        public static function updateCategory($datos,$id){
+            $conexion = Conectar::conectate();
+
             $tabla = "categories";	
-            $consulta = "UPDATE $tabla SET name = ?  WHERE id like ?";
-            $resultado = $this->conexion->prepare($consulta);
-            if($resultado->execute(array($datos["name"],$id)))
+            $consulta = "UPDATE $tabla SET name = ?, image = ?, description = ? WHERE id like ?";
+            $resultado = $conexion->prepare($consulta);
+            if($resultado->execute(array($datos["name"],$datos["image"],$datos["description"],$id)))
             {return true;}
             else{return false;}
         }
 
-        public function eliminar($id)
-        {
+        public static function delete($id) {
+            $conexion = Conectar::conectate();
+
             $tabla = "categories";
-            $consulta = "DELETE FROM $tabla where id like '$id'";
-            if($resultado = $this->conexion->exec($consulta))
+            $query = "DELETE FROM $tabla where id like '$id'";
+            if($conexion->exec($query))
             {return true;}
             else{return false;}
         }
