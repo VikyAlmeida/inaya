@@ -9,4 +9,7 @@
     <link rel="stylesheet" href="./views/css/bootstrap.css">
     <link rel="stylesheet" href="./views/css/style.css">
     <link rel="stylesheet" href="./views/css/fonts.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
 </head>

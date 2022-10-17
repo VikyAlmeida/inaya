@@ -1,7 +1,5 @@
-
       <section class="section">
         <div class="swiper-form-wrap">
-          <!-- Swiper-->
           <div class="swiper-container swiper-slider swiper-slider_height-1 swiper-align-left swiper-align-left-custom context-dark bg-gray-darker" data-loop="false" data-autoplay="5500" data-simulate-touch="false" data-slide-effect="fade">
             <div class="swiper-wrapper">
               <div class="swiper-slide" data-slide-bg="./views/images/swiper-slide-1.jpg">
@@ -121,7 +119,7 @@
                       </div>
                     </div>
                     <div class="form-wrap form-button">
-                      <button class="button button-block button-secondary" type="submit">search flight</button>
+                      <button class="button button-block button-secondary">search flight</button>
                     </div>
                   </form>
                 </div>
@@ -130,7 +128,12 @@
           </div>
         </div>
       </section>
-
+    <?php
+      $password = 'mipassword';
+      $protegerpass = password_hash($password, PASSWORD_DEFAULT);
+      var_dump($protegerpass);
+      var_dump(password_verify('mipassword', $protegerpass));
+    ?>
       <section class="section section-variant-1 bg-default novi-background bg-cover"> 
         <div class="container container-wide">
           <div class="row row-fix justify-content-xl-end row-30 text-center text-xl-left">
