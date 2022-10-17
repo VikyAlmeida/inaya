@@ -1,7 +1,5 @@
-
       <section class="section">
         <div class="swiper-form-wrap">
-          <!-- Swiper-->
           <div class="swiper-container swiper-slider swiper-slider_height-1 swiper-align-left swiper-align-left-custom context-dark bg-gray-darker" data-loop="false" data-autoplay="5500" data-simulate-touch="false" data-slide-effect="fade">
             <div class="swiper-wrapper">
               <div class="swiper-slide" data-slide-bg="./views/images/swiper-slide-1.jpg">
@@ -121,12 +119,7 @@
                       </div>
                     </div>
                     <div class="form-wrap form-button">
-                      <button class="button button-block button-secondary" onclick="Swal.fire({
-  title: 'Error!',
-  text: 'Do you want to continue',
-  icon: 'error',
-  confirmButtonText: 'Cool'
-})">search flight</button>
+                      <button class="button button-block button-secondary">search flight</button>
                     </div>
                   </form>
                 </div>
