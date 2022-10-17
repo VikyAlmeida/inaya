@@ -8,18 +8,19 @@
 <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
 
 <script>
-    const login = sessionStorage.getItem("login");
-    if (login == 0) {
-        SingIn.fire({
+    console.log('hola')
+    const loginSwal = sessionStorage.getItem("login");
+    if (loginSwal == 0) {
+        ConexionToPlatform.fire({
             icon: 'success',
             title: 'Ha iniciado sesion con exito!'
         })
         sessionStorage.removeItem("login");
     }
 
-    const logout = sessionStorage.getItem("logout");
-    if (logout == 0) {
-        SingIn.fire({
+    const logoutSwal = sessionStorage.getItem("logout");
+    if (logoutSwal == 0) {
+        ConexionToPlatform.fire({
             icon: 'success',
             title: 'Desconectado con exito!'
         })
@@ -37,7 +38,4 @@
         sessionStorage.removeItem("accion");
         sessionStorage.removeItem("name");
     }
-</script>
-<script>
-  Dropzone.discover();
 </script>
