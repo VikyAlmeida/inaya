@@ -32,6 +32,7 @@
                   <span class="heading-5">
                     <a href="categories-<?=$category['id']?>-deleted"><span class='fa-trash'></span></a>
                     <a href="categories-<?=$category['id']?>"><span class='fa-edit'></span></a>
+                    <a href="sections-categories-<?=$category['id']?>"><span class='fa-eye'></span></a>
                   </span>
                 </div>
               </article>
@@ -45,8 +46,20 @@
           </div>
         </div>
       </section>
-
+<?php
+  $socialNetworkController = new socialNetworkController();
+  $socialNetworks = $socialNetworkController->list('socialnetworks');
+?>
 <section class="section section-lg bg-gray-lighter novi-background bg-cover text-center">
+    <form action="" method="post">
+      <input type="text" name="name">
+      <input type="submit" value="Alta de red social">
+      
+      <?php
+          $socialNetworkController = new socialNetworkController();
+          $socialNetworkController->create();
+      ?>
+    </form>
     <div class="container container-wide">
         <h3>Redes sociales</h3>
         <div class="divider divider-decorate"></div>

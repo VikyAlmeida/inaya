@@ -2,12 +2,11 @@
 class routerController{
     public function routes() {
         $urlsCommun = array('home');
-        $urlsLogged = array('logout');
+        $urlsLogged = array('logout', 'sections');
         $urlsLoggedByRole = array('panel', 'categories');
         $urlsNotLogged = array('login');
         if(isset($_GET["ruta"])){
             $route = explode("-", $_GET["ruta"]);
-            
             if (in_array($route[0], $urlsCommun)):
                 include("./views/modules/".$route[0].".php");
 
